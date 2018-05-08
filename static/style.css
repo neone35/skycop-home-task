@@ -124,10 +124,9 @@ pre code {
 }
 
 .buttonStyle {
-  display:block;
-  text-align:center;
+  display:block !important;
   margin: 0 auto;
-  margin-bottom: 5px;
+  margin-top: 1em;
 }
 
 .formWrapper {

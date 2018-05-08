@@ -10,7 +10,8 @@
     "dev": "next",
     "build": "next build",
     "start": "next start",
-    "test": "eslint pages components"
+    "test": "eslint pages components",
+    "heroku-postbuild": "yarn build"
   },
   "author": "Artur Maslov",
   "license": "UNLICENSED",
