@@ -1,5 +1,3 @@
-[![Deploy to now](https://deploy.now.sh/static/button.svg)](https://deploy.now.sh/?repo=https://github.com/zeit/next.js/tree/master/examples/with-redux-wrapper)
-
 # Skycop home task
 
 ## How to use
@@ -23,10 +21,9 @@ displays a dropdown with the results, and upon changing a selection, it's value 
 has to be displayed somewhere.
 
 Criteria:
+
 * On button click the data is "fetched"
 * Dropdown has to be displayed from redux state
 * On change, the value has to be shown somewhere
 
 P.S. You can use default bootstrap styles if you wish.
-
-

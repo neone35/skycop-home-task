@@ -1,16 +1,16 @@
-import { createStore, applyMiddleware, compose, combineReducers } from 'redux'
-import thunkMiddleware from 'redux-thunk'
+import { createStore, applyMiddleware, compose, combineReducers } from 'redux';
+import thunkMiddleware from 'redux-thunk';
 import getRootUrl from './getRootUrl';
 
 const ROOT_URL = getRootUrl();
 
 const initialState = {
   skycopReducer: 0,
-}
+};
 
 export const actionTypes = {
   FETCH_RES: 'fetch_res',
-}
+};
 
 const skycopReducer = (state = [], action) => {
   // console.log(action);
@@ -24,12 +24,12 @@ const skycopReducer = (state = [], action) => {
 
 // ACTIONS
 export const fetchSkycopResponse = () => async (dispatch) => {
-  const url = `${ROOT_URL}/static/skycop-response.json`
-  const res = await fetch(url)
+  const url = `${ROOT_URL}/static/skycop-response.json`;
+  await fetch(url)
     .then(jsonData => jsonData.json())
-    .then(payload => {
+    .then((payload) => {
       // you can access your data here
-      dispatch({ type: actionTypes.FETCH_RES, payload: payload });
+      dispatch({ type: actionTypes.FETCH_RES, payload });
     });
 };
 
@@ -37,6 +37,4 @@ const rootReducer = combineReducers({
   skycopReducer,
 });
 
-export const initStore = (newInitialState = initialState) => {
-  return createStore(rootReducer, newInitialState, compose(applyMiddleware(thunkMiddleware)))
-}
+export const initStore = (newInitialState = initialState) => createStore(rootReducer, newInitialState, compose(applyMiddleware(thunkMiddleware)));
