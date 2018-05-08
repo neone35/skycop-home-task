@@ -9,8 +9,10 @@ git clone https://github.com/neone35/skycop-home-task.git
 cd skycop-home-task
 ```
 
+Install deps and start project
+
 ```bash
-yarn
+yarn install
 yarn dev
 ```
 

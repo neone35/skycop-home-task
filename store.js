@@ -37,4 +37,5 @@ const rootReducer = combineReducers({
   skycopReducer,
 });
 
-export const initStore = (newInitialState = initialState) => createStore(rootReducer, newInitialState, compose(applyMiddleware(thunkMiddleware)));
+export const initStore = (newInitialState = initialState) =>
+  createStore(rootReducer, newInitialState, compose(applyMiddleware(thunkMiddleware)));

@@ -1,6 +1,6 @@
 body {
-  margin: 20px auto;
-  width: 60%;
+  margin: 0 auto;
+  width: 100%;
 }
 
 header h2 {
@@ -121,4 +121,16 @@ pre code {
   border: 2px solid red;
   font-weight: bold;
   color: purple;
+}
+
+.buttonStyle {
+  display:block;
+  text-align:center;
+  margin: 0 auto;
+  margin-bottom: 5px;
+}
+
+.formWrapper {
+  width: 60%;
+  margin: 0 auto;
 }
